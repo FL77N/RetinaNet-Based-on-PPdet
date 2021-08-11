@@ -1,0 +1,5 @@
+use_gpu: true
+log_iter: 100
+save_dir: /root/paddlejob/workspace/output
+snapshot_epoch: 1
+print_flops: false
