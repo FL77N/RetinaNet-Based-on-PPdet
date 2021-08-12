@@ -7,6 +7,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+import paddle
 from ppdet.core.workspace import register, create
 from .meta_arch import BaseArch
 
@@ -65,12 +66,30 @@ class RetinaNet(BaseArch):
         ]
 
         if not self.training:
+            if isinstance(self.inputs["im_shape"], list):
+                self.inputs["im_shape"] = paddle.concat(self.inputs["im_shape"])
+        
+            if isinstance(self.inputs["scale_factor"], list):
+                self.inputs["scale_factor"] = paddle.concat(self.inputs["scale_factor"])
+
+            if "scale_factor" in self.inputs:
+                self.inputs["scale_factor_wh"] = paddle.concat([self.inputs["scale_factor"][:, 1:2], 
+                                                                self.inputs["scale_factor"][:, 0:1]], axis=-1)
+            else:
+                self.inputs["scale_factor_wh"] = paddle.ones([len(self.inputs["im_shape"]), 2]).astype("float32")
+
+            self.inputs["img_whwh"] = paddle.concat([self.inputs["im_shape"][:, 1:2],
+                                                     self.inputs["im_shape"][:, 0:1],
+                                                     self.inputs["im_shape"][:, 1:2],
+                                                     self.inputs["im_shape"][:, 0:1]], axis=-1)
+
             bboxes = self.postprocess(
                 pred_scores_list, 
                 pred_boxes_list, 
                 anchors,
                 self.inputs["scale_factor_wh"], 
                 self.inputs["img_whwh"])
+
             return bboxes
         else:
             return anchors, pred_scores_list, pred_boxes_list
@@ -87,8 +106,10 @@ class RetinaNet(BaseArch):
         return loss_dict
 
     def get_pred(self):
+
         bbox_pred, bbox_num = self._forward()
         output = {'bbox': bbox_pred, 'bbox_num': bbox_num}
+
         return output
 
 
