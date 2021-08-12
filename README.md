@@ -4,8 +4,8 @@ A single stage object detection model is implemented on paddle 2.1.0 and paddled
 # Results
 Method|Environment|mAP|Epoch|Dataset
 :--:|:--:|:--:|:--:|:--:
-R50_fpn_100pro_3x|Tesla V-100 $\times$ 8 ([Facebook official](https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md))|37.4|12|COCO
-R50_fpn_100pro_3x|**Tesla V-100 $\times$ 4**|<font color=red>43.1</font>|12|COCO
+R50_fpn_1x|Tesla V-100 x 8 ([Facebook official](https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md))|37.4|12|COCO
+R50_fpn_1x|**Tesla V-100 x 4**|<font color=red>43.1</font>|12|COCO
 
 # Model and Pretrain Model
 * The best model is saved to: [Baidu Aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/104021)
