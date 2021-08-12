@@ -5,4 +5,4 @@ The best AP is 37.4, which have achieved [Facebook official's](https://github.co
 
 * The best model is saved to: [Baidu Aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/104021)
 
-* torch and paddle [pretrain](https://aistudio.baidu.com/aistudio/datasetdetail/103882)
+* torch and paddle [pretrain model](https://aistudio.baidu.com/aistudio/datasetdetail/103882)
