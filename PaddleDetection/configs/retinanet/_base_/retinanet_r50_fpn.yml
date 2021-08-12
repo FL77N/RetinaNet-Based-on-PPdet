@@ -1,6 +1,5 @@
 architecture: RetinaNet
-# pretrain_weights: https://paddledet.bj.bcebos.com/models/pretrained/ResNet50_cos_pretrained.pdparams
-pretrain_weights: /root/paddlejob/workspace/train_data/datasets/data103882/pt_res_head.pdparams
+pretrain_weights: https://paddledet.bj.bcebos.com/models/pretrained/ResNet50_cos_pretrained.pdparams
 
 RetinaNet:
   backbone: ResNet
