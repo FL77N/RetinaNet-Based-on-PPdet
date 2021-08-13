@@ -4,11 +4,15 @@ A single stage object detection model is implemented on paddle 2.1.0 and paddled
 ## Results
 Method|Environment|mAP|Epoch|Dataset
 :--:|:--:|:--:|:--:|:--:
-R50_fpn_1x|Tesla V-100 x 8 ([Facebook official](https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md))|37.4|12|COCO
-R50_fpn_1x|**Tesla V-100 x 4**|<font color=red>37.4</font>|12|COCO
+R50_fpn_1x_ss_training|Tesla V-100 x 8 ([Facebook official](https://github.com/facebookresearch/Detectron/blob/master/MODEL_ZOO.md))|35.7|12|COCO
+R50_fpn_1x_ss_training|**Tesla V-100 x 4**|**37.0**|12|COCO
+R50_fpn_1x_ms_training|Tesla V-100 x 8 ([Facebook official](https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md))|37.4|12|COCO
+R50_fpn_1x_ms_training|**Tesla V-100 x 4**|**37.4**|12|COCO
+
 
 ## Model and Pretrain Model
-* The best model is saved to: [Baidu Aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/104021)
+* The single scale training best model is saved to: [Baidu Aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/104154)
+* The multi scale training best model is saved to: [Baidu Aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/104021)
 * Torch and paddle [pretrain model](https://aistudio.baidu.com/aistudio/datasetdetail/103882)
 
 ## Train
