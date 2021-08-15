@@ -25,4 +25,4 @@ R50_fpn_1x_ms_training|**Tesla V-100 x 4**|**37.4**|12|COCO
 
 ## Eval
 
-```python tools/eval.py -c configs/sparse_rcnn/sparse_rcnn_r50_fpn_3x_pro100_coco.yml```
+```python tools/eval.py -c PaddleDetection/tools/train.py -c PaddleDetection/configs/retinanet/retinanet_r50_fpn_1x_coco.yml```
