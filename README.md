@@ -4,10 +4,10 @@ A one-stage object detection model is implemented on paddle 2.1.0 and paddledete
 ## Results
 Method|Environment|mAP|Epoch|Dataset
 :--:|:--:|:--:|:--:|:--:
-R50_fpn_1x_ss_training|Tesla V-100 x 8 ([Facebook official](https://github.com/facebookresearch/Detectron/blob/master/MODEL_ZOO.md))|35.7|12|COCO
-R50_fpn_1x_ss_training|**Tesla V-100 x 4**|**37.0**|12|COCO
-R50_fpn_1x_ms_training|Tesla V-100 x 8 ([Facebook official](https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md))|37.4|12|COCO
-R50_fpn_1x_ms_training|**Tesla V-100 x 4**|**37.4**|12|COCO
+r50_fpn_1x_ss_training|Tesla V-100 x 8 ([Facebook official](https://github.com/facebookresearch/Detectron/blob/master/MODEL_ZOO.md))|35.7|12|COCO
+r50_fpn_1x_ss_training|**Tesla V-100 x 4**|**37.0**|12|COCO
+r50_fpn_1x_ms_training|Tesla V-100 x 8 ([Facebook official](https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md))|37.4|12|COCO
+r50_fpn_1x_ms_training|**Tesla V-100 x 4**|**37.4**|12|COCO
 
 
 ## Model and Pretrain Model
