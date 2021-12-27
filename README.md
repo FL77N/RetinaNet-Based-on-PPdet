@@ -111,13 +111,13 @@ python tools/infer.py -c configs/your dir/your config.yml --infer_img=your image
 ├─config                          # 配置
 ├─dataset                         # 数据集加载
 ├─deploy                          # 模型部署
-├─demo                            # demo
 ├─output                          # infer 可视化输出
 ├─ppdet                           # 模型
-├─test_tipc                       # tipc 脚本
+├─tipc                            # tipc 测试脚本
 ├─tools                           # 训练、推理、预测
 │  README.md                      # readme
 │  requirement.txt                # 依赖
+│  train-log.log                  # 训练日志
 ```
 
 ### 5.2 参数说明
