@@ -45,7 +45,11 @@ Linux端基础训练预测功能测试的主程序为`test_train_inference_pytho
 
 ### 2.3 功能测试
 先运行`prepare.sh`准备数据和模型，然后运行`test_train_inference_python.sh`进行测试，最终在```tipc/train_infer_python/output```目录下生成`python_infer_*.log`格式的日志文件，
-以 fast_rcnn_r50_fpn_1x_coco 为例。
+格式为：
+```
+bash tipc/train_infer_python/prepare.sh  模型配置文件地址 '模式'
+```
+以 retinanet_r50_fpn_1x_coco 为例。
 
 `test_train_inference_python.sh`包含4种运行模式，每种模式的运行数据不同，分别用于测试速度和精度，分别是：
 
