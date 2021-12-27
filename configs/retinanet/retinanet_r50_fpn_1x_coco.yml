@@ -5,5 +5,3 @@ _BASE_: [
   '_base_/optimizer_1x.yml',
   '_base_/retinanet_reader.yml',
 ]
-
-# weights: /home/aistudio/data/data103802/best_model.pdparams
