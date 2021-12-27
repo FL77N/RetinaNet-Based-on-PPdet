@@ -37,9 +37,9 @@
 
 Method|Environment|mAP|Epoch|batch_size|config|Dataset
 :--:|:--:|:--:|:--:|:--:|:--:|:--:
-r50_fpn_1x_ss_training|Tesla V-100 x 8 <\br>([Facebook official](https://github.com/facebookresearch/Detectron/blob/master/MODEL_ZOO.md))|35.7|12|16|[retinanet_R-50-FPN_1x.yaml](https://github.com/facebookresearch/Detectron/blob/main/configs/12_2017_baselines/retinanet_R-50-FPN_1x.yaml)|COCO
+r50_fpn_1x_ss_training|Tesla V-100 x 8 <br/>([Facebook official](https://github.com/facebookresearch/Detectron/blob/master/MODEL_ZOO.md))|35.7|12|16|[retinanet_R-50-FPN_1x.yaml](https://github.com/facebookresearch/Detectron/blob/main/configs/12_2017_baselines/retinanet_R-50-FPN_1x.yaml)|COCO
 r50_fpn_1x_ss_training|**Tesla V-100 x 4**|**37.0**|12|16|[-](https://github.com/facebookresearch/Detectron/blob/master/MODEL_ZOO.md)|COCO
-r50_fpn_1x_ms_training|Tesla V-100 x 8 <\br>([Facebook official](https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md))|37.4|12|16|[retinanet_R_50_FPN_1x.yaml](https://github.com/facebookresearch/detectron2/blob/main/configs/COCO-Detection/retinanet_R_50_FPN_1x.yaml)|COCO
+r50_fpn_1x_ms_training|Tesla V-100 x 8 <br/>([Facebook official](https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md))|37.4|12|16|[retinanet_R_50_FPN_1x.yaml](https://github.com/facebookresearch/detectron2/blob/main/configs/COCO-Detection/retinanet_R_50_FPN_1x.yaml)|COCO
 r50_fpn_1x_ms_training|**Tesla V-100 x 4**|**37.4**|12|16|[retinanet_r50_fpn_1x_coco.yml](https://github.com/FL77N/RetinaNet-Based-on-PPdet/blob/main/configs/retinanet/retinanet_r50_fpn_1x_coco.yml)|COCO
 
 **模型下载**
