@@ -83,8 +83,8 @@ bash test_tipc2/prepare.sh ./test_tipc2/configs/fast_rcnn_r50_fpn_1x_coco.txt 'l
 # 运行测试
 bash test_tipc2/test_train_inference_python.sh ./test_tipc2/configs/fast_rcnn_r50_fpn_1x_coco.txt 'lite_train_infer'
 ```
-关于本示例命令的更多信息可查看[基础训练预测使用文档](docs/test_train_inference_python.md)。
 
 ## 4. 开始测试
-各功能测试中涉及混合精度、裁剪、量化等训练相关，及 mkldnn、Tensorrt 等多种预测相关参数配置，请点击下方相应链接了解更多细节和使用教程：  
-- [test_train_inference_python 使用](docs/test_train_inference_python.md) ：测试基于 Python 的模型训练、评估、推理等基本功能，包括裁剪、量化、蒸馏。
+各功能测试中涉及混合精度等训练相关，及 mkldnn、Tensorrt 等多种预测相关参数配置，请点击下方相应链接了解更多细节和使用教程：  
+- [test_train_inference_python 使用](https://github.com/FL77N/RetinaNet-Based-on-PPdet/blob/main/tipc/train_infer_python/README.md) ：测试基于 Python 的模型训练、评估、推理等基本功能，包括裁剪、量化、蒸馏。
+- [test_serving 使用](https://github.com/FL77N/RetinaNet-Based-on-PPdet/blob/main/tipc/serving/README.md) ：serving 端的预测功能。
