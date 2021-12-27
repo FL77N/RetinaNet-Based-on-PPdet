@@ -69,19 +69,19 @@ tipc/
 ```shell
 # 功能：准备数据
 # 格式：bash + 运行脚本 + 参数1: 配置文件选择 + 参数2: 模式选择
-bash test_tipc/prepare.sh  configs/[model_name]/[params_file_name]  [Mode]
+bash tipc/train_infer_python/prepare.sh configs/[model_name]/[params_file_name] [Mode]
 
 # 功能：运行测试
 # 格式：bash + 运行脚本 + 参数1: 配置文件选择 + 参数2: 模式选择
-bash test_tipc/test_train_inference_python.sh configs/[model_name]/[params_file_name]  [Mode]
+bash tipc/train_infer_python/test_train_inference_python.sh configs/[model_name]/[params_file_name] [Mode]
 ```
 
-例如，测试基本训练预测功能的`lite_train_infer`模式，运行：
+例如，测试基本训练预测功能的`lite_train_lite_infer`模式，运行：
 ```shell
 # 准备数据
-bash test_tipc2/prepare.sh ./test_tipc2/configs/fast_rcnn_r50_fpn_1x_coco.txt 'lite_train_infer'
+bash tipc/train_infer_python/prepare.sh tipc/train_infer_python/configs/retinanet/retinanet_r50_fpn_1x_coco.txt 'lite_train_lite_infer'
 # 运行测试
-bash test_tipc2/test_train_inference_python.sh ./test_tipc2/configs/fast_rcnn_r50_fpn_1x_coco.txt 'lite_train_infer'
+bash tipc/train_infer_python/test_train_inference_python.sh tipc/train_infer_python/configs/retinanet/retinanet_r50_fpn_1x_coco.txt 'lite_train_lite_infer'
 ```
 
 ## 4. 开始测试
