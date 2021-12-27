@@ -1,0 +1,54 @@
+_BASE_: [
+  '../datasets/coco_detection.yml',
+  '../runtime.yml',
+  '../retinanet/_base_/retinanet_r50_fpn.yml',
+  '../retinanet/_base_/optimizer_1x.yml',
+  '../retinanet/_base_/retinanet_reader.yml',
+]
+
+RetinaNetHead:
+  num_classes: 80
+  num_convs: 4
+  loss_func: GHMLoss
+  prior_prob: 0.5
+
+GHMLoss:
+  positive_thresh: 0.5
+  negative_thresh: 0.4
+  allow_low_quality: true
+  ghm_c_bins: 30
+  ghm_c_momentum: 0.75
+  ghm_c_use_sigmoid: true
+  ghm_c_weight: 1.0
+  ghm_c_reduction: mean
+  ghm_r_mu: 0.02
+  ghm_r_bins: 10
+  ghm_r_momentum: 0.7
+  ghm_r_weight: 10.0
+  ghm_r_reduction: mean
+
+TrainReader:
+  sample_transforms:
+  - Decode: {}
+  - Resize: {interp: 1, target_size: [800, 1333], keep_ratio: True}
+  - RandomFlip: {prob: 0.5}
+  - NormalizeImage: {is_scale: true, mean: [0.485,0.456,0.406], std: [0.229, 0.224,0.225]}
+  - Permute: {}
+  batch_size: 2
+
+LearningRate:
+  base_lr: 0.005
+  schedulers:
+  - !PiecewiseDecay
+    gamma: 0.1
+    milestones: [8, 11]
+  - !LinearWarmup
+    start_factor: 0.3333
+    steps: 500
+
+OptimizerBuilder:
+  clip_grad_by_norm: 35.0
+  optimizer:
+    type: Momentum
+    weight_decay: 0.0001
+    momentum: 0.9

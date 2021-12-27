@@ -1,0 +1,19 @@
+gast==0.3.3
+ujson
+tqdm
+typeguard ; python_version >= '3.4'
+visualdl>=2.1.0 ; python_version <= '3.7'
+opencv-python
+PyYAML
+shapely
+scipy
+terminaltables
+Cython
+pycocotools
+#xtcocotools==1.6 #only for crowdpose
+setuptools>=42.0.0
+lap
+sklearn
+motmetrics
+openpyxl
+cython_bbox

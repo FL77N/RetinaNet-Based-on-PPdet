@@ -1,0 +1,17 @@
+_BASE_: [
+  '../datasets/coco_detection.yml',
+  '../runtime.yml',
+  '_base_/retinanet_r50_fpn.yml',
+  '_base_/optimizer_1x.yml',
+  '_base_/retinanet_reader.yml',
+]
+
+pretrain_weights: https://paddledet.bj.bcebos.com/models/pretrained/ShuffleNetV2_x1_0_pretrained.pdparams
+
+RetinaNet:
+  backbone: ShuffleNetV2
+
+ShuffleNetV2:
+  scale: 1.0
+  feature_maps: [5, 13, 17]
+  act: leaky_relu

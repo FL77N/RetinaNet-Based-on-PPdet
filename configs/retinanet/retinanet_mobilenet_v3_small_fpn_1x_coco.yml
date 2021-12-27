@@ -1,0 +1,20 @@
+_BASE_: [
+  '../datasets/coco_detection.yml',
+  '../runtime.yml',
+  '_base_/retinanet_r50_fpn.yml',
+  '_base_/optimizer_1x.yml',
+  '_base_/retinanet_reader.yml',
+]
+
+pretrain_weights: https://paddledet.bj.bcebos.com/models/pretrained/MobileNetV3_small_x1_0_ssld_pretrained.pdparams
+ # sync_bn
+RetinaNet:
+  backbone: MobileNetV3
+
+MobileNetV3:
+  model_name: small
+  scale: 1.
+  with_extra_blocks: false
+  extra_block_filters: []
+  feature_maps: [4, 9, 12]
+  norm_type: bn

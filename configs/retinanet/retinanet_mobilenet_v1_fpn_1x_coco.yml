@@ -1,0 +1,19 @@
+_BASE_: [
+  '../datasets/coco_detection.yml',
+  '../runtime.yml',
+  '_base_/retinanet_r50_fpn.yml',
+  '_base_/optimizer_1x.yml',
+  '_base_/retinanet_reader.yml',
+]
+
+pretrain_weights: https://paddledet.bj.bcebos.com/models/pretrained/MobileNetV1_pretrained.pdparams
+
+RetinaNet:
+  backbone: MobileNet
+
+MobileNet:
+  scale: 1
+  feature_maps: [4, 6, 13]
+  with_extra_blocks: false
+  extra_block_filters: []
+  norm_type: bn
