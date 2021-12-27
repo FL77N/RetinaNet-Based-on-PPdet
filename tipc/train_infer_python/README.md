@@ -7,7 +7,7 @@ Linux端基础训练预测功能测试的主程序为`test_train_inference_pytho
 
 - 训练相关：
 
-| 算法名称 | 模型名称 | 单机单卡 | 单机多卡 | 多机多卡 | 模型压缩（单机多卡） |
+| 算法名称 | 模型名称 | 单机单卡 | 单机多卡 | 多机多卡 | 模型压缩 |
 |  :----  |   :----  |    :----  |  :----   |  :----   |  :----   |
 |  Retinanet  | retinanet_r50_fpn_1x_coco | 正常训练 <br> 混合精度 | 正常训练 <br> 混合精度 | 正常训练 <br> 混合精度 | - |
 |  Retinanet  | retinanet_mobilenet_v1_fpn_1x_coco | 正常训练 <br> 混合精度 | 正常训练 <br> 混合精度 | 正常训练 <br> 混合精度 | - |
@@ -40,10 +40,11 @@ Linux端基础训练预测功能测试的主程序为`test_train_inference_pytho
     python setup.py bdist_wheel
     pip install ./dist/auto_log-1.0.0-py3-none-any.whl
     ```
+### 2.2 下载权重
+需要下载相应权重至 tipc/train_infer_python/weights 目录下
 
-
-### 2.2 功能测试
-先运行`prepare.sh`准备数据和模型，然后运行`test_train_inference_python.sh`进行测试，最终在```test_tipc/output```目录下生成`python_infer_*.log`格式的日志文件，
+### 2.3 功能测试
+先运行`prepare.sh`准备数据和模型，然后运行`test_train_inference_python.sh`进行测试，最终在```tipc/train_infer_python/output```目录下生成`python_infer_*.log`格式的日志文件，
 以 fast_rcnn_r50_fpn_1x_coco 为例。
 
 `test_train_inference_python.sh`包含4种运行模式，每种模式的运行数据不同，分别用于测试速度和精度，分别是：
