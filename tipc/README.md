@@ -42,6 +42,7 @@ tipc/
 │       ├── xxx.pdparams
 │       ├── ...
 │   ├── prepare.sh                                   # 完成 test_*.sh 运行所需要的数据和模型下载
+│   ├── common_func.sh                               # 共同的工具函数
 │   ├── test_train_inference_python.sh               # 测试 python 训练预测的主程序
 │   ├── configs/
 │   ├── README.md                                    # 训推测使用文档
