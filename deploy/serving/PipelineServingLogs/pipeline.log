@@ -1,0 +1,104 @@
+WARNING 2021-12-27 21:42:38,811 [pipeline_server.py:509] [CONF] build_dag_each_worker not set, use default: False
+WARNING 2021-12-27 21:42:38,811 [pipeline_server.py:509] [CONF] retry not set, use default: 1
+WARNING 2021-12-27 21:42:38,811 [pipeline_server.py:509] [CONF] client_type not set, use default: brpc
+WARNING 2021-12-27 21:42:38,811 [pipeline_server.py:509] [CONF] use_profile not set, use default: False
+WARNING 2021-12-27 21:42:38,811 [pipeline_server.py:509] [CONF] channel_size not set, use default: 0
+WARNING 2021-12-27 21:42:38,811 [pipeline_server.py:509] [CONF] tracer not set, use default: {}
+WARNING 2021-12-27 21:42:38,811 [pipeline_server.py:509] [CONF] channel_recv_frist_arrive not set, use default: False
+WARNING 2021-12-27 21:42:38,811 [pipeline_server.py:509] [CONF] interval_s not set, use default: -1
+WARNING 2021-12-27 21:42:38,811 [pipeline_server.py:509] [CONF] timeout not set, use default: -1
+WARNING 2021-12-27 21:42:38,811 [pipeline_server.py:509] [CONF] retry not set, use default: 1
+WARNING 2021-12-27 21:42:38,811 [pipeline_server.py:509] [CONF] batch_size not set, use default: 1
+WARNING 2021-12-27 21:42:38,811 [pipeline_server.py:509] [CONF] auto_batching_timeout not set, use default: -1
+WARNING 2021-12-27 21:42:38,811 [pipeline_server.py:509] [CONF] workdir not set, use default: 
+WARNING 2021-12-27 21:42:38,811 [pipeline_server.py:509] [CONF] thread_num not set, use default: 2
+WARNING 2021-12-27 21:42:38,811 [pipeline_server.py:509] [CONF] mem_optim not set, use default: True
+WARNING 2021-12-27 21:42:38,812 [pipeline_server.py:509] [CONF] ir_optim not set, use default: False
+WARNING 2021-12-27 21:42:38,812 [pipeline_server.py:509] [CONF] precision not set, use default: fp32
+WARNING 2021-12-27 21:42:38,812 [pipeline_server.py:509] [CONF] use_calib not set, use default: False
+WARNING 2021-12-27 21:42:38,812 [pipeline_server.py:509] [CONF] use_mkldnn not set, use default: False
+WARNING 2021-12-27 21:42:38,812 [pipeline_server.py:509] [CONF] mkldnn_cache_capacity not set, use default: 0
+INFO 2021-12-27 21:42:38,818 [operator.py:181] local_service_conf: {'model_config': './serving_server', 'device_type': 1, 'devices': '0', 'client_type': 'local_predictor', 'workdir': '', 'thread_num': 2, 'mem_optim': True, 'ir_optim': False, 'precision': 'fp32', 'use_calib': False, 'use_mkldnn': False, 'mkldnn_cache_capacity': 0}
+INFO 2021-12-27 21:42:38,819 [local_service_handler.py:172] Models(./serving_server) will be launched by device gpu. use_gpu:True, use_trt:False, use_lite:False, use_xpu:False, device_type:1, devices:[0], mem_optim:True, ir_optim:False, use_profile:False, thread_num:2, client_type:local_predictor, fetch_names:None, precision:fp32, use_mkldnn:False, mkldnn_cache_capacity:0, mkldnn_op_list:None, mkldnn_bf16_op_list:None
+INFO 2021-12-27 21:42:38,819 [operator.py:285] retinanet 
+	input_ops: @DAGExecutor,
+	server_endpoints: None
+	fetch_list: None
+	client_config: ./serving_server/serving_server_conf.prototxt
+	concurrency: 1,
+	timeout(s): -1,
+	retry: 1,
+	batch_size: 1,
+	auto_batching_timeout(s): None
+INFO 2021-12-27 21:42:38,819 [pipeline_server.py:215] ============= PIPELINE SERVER =============
+INFO 2021-12-27 21:42:38,819 [pipeline_server.py:218] 
+{
+    "worker_num":20,
+    "http_port":18080,
+    "rpc_port":9993,
+    "dag":{
+        "is_thread_op":false,
+        "retry":1,
+        "client_type":"brpc",
+        "use_profile":false,
+        "channel_size":0,
+        "tracer":{
+            "interval_s":-1
+        },
+        "channel_recv_frist_arrive":false
+    },
+    "op":{
+        "retinanet":{
+            "concurrency":1,
+            "local_service_conf":{
+                "model_config":"./serving_server",
+                "device_type":1,
+                "devices":"0",
+                "client_type":"local_predictor",
+                "workdir":"",
+                "thread_num":2,
+                "mem_optim":true,
+                "ir_optim":false,
+                "precision":"fp32",
+                "use_calib":false,
+                "use_mkldnn":false,
+                "mkldnn_cache_capacity":0
+            },
+            "timeout":-1,
+            "retry":1,
+            "batch_size":1,
+            "auto_batching_timeout":-1
+        }
+    },
+    "build_dag_each_worker":false
+}
+INFO 2021-12-27 21:42:38,819 [pipeline_server.py:223] -------------------------------------------
+INFO 2021-12-27 21:42:38,819 [operator.py:308] Op(retinanet) use local rpc service at port: []
+INFO 2021-12-27 21:42:38,839 [dag.py:496] [DAG] Succ init
+INFO 2021-12-27 21:42:38,839 [dag.py:659] ================= USED OP =================
+INFO 2021-12-27 21:42:38,839 [dag.py:662] retinanet
+INFO 2021-12-27 21:42:38,839 [dag.py:663] -------------------------------------------
+INFO 2021-12-27 21:42:38,840 [dag.py:680] ================== DAG ====================
+INFO 2021-12-27 21:42:38,840 [dag.py:682] (VIEW 0)
+INFO 2021-12-27 21:42:38,840 [dag.py:684]   [@DAGExecutor]
+INFO 2021-12-27 21:42:38,840 [dag.py:686]     - retinanet
+INFO 2021-12-27 21:42:38,840 [dag.py:682] (VIEW 1)
+INFO 2021-12-27 21:42:38,840 [dag.py:684]   [retinanet]
+INFO 2021-12-27 21:42:38,840 [dag.py:687] -------------------------------------------
+INFO 2021-12-27 21:42:38,855 [dag.py:730] op:retinanet add input channel.
+INFO 2021-12-27 21:42:38,863 [dag.py:759] last op:retinanet add output channel
+INFO 2021-12-27 21:42:38,864 [dag.py:800] [DAG] Succ build DAG
+INFO 2021-12-27 21:42:38,866 [dag.py:832] [DAG] start
+INFO 2021-12-27 21:42:38,866 [dag.py:182] [DAG] set in channel succ, name [@DAGExecutor]
+INFO 2021-12-27 21:42:38,867 [pipeline_server.py:51] [PipelineServicer] succ init
+INFO 2021-12-27 21:42:38,873 [local_service_handler.py:172] Models(./serving_server) will be launched by device gpu. use_gpu:True, use_trt:False, use_lite:False, use_xpu:False, device_type:1, devices:[0], mem_optim:True, ir_optim:False, use_profile:False, thread_num:2, client_type:local_predictor, fetch_names:None, precision:fp32, use_mkldnn:False, mkldnn_cache_capacity:0, mkldnn_op_list:None, mkldnn_bf16_op_list:None
+INFO 2021-12-27 21:42:38,873 [operator.py:1306] Init cuda env in process 0
+INFO 2021-12-27 21:42:38,873 [local_service_handler.py:208] GET_CLIENT : concurrency_idx=0, device_num=1
+INFO 2021-12-27 21:42:39,719 [local_predict.py:137] pdmodel_file_list:['./serving_server/model.pdmodel'], pdiparams_file_list:['./serving_server/model.pdiparams']
+INFO 2021-12-27 21:42:39,719 [local_predict.py:153] LocalPredictor load_model_config params: model_path:./serving_server, use_gpu:True, gpu_id:0, use_profile:False, thread_num:2, mem_optim:True, ir_optim:False, use_trt:False, use_lite:False, use_xpu:False, precision:fp32, use_calib:False, use_mkldnn:False, mkldnn_cache_capacity:0, mkldnn_op_list:None, mkldnn_bf16_op_list:None, use_feed_fetch_ops:False, 
+INFO 2021-12-27 21:42:40,717 [pipeline_server.py:56] (log_id=10000) inference request name:retinanet self.name:retinanet time:1640612560.7170644
+INFO 2021-12-27 21:42:40,717 [operator.py:1723] RequestOp unpack one request. log_id:10000, clientip:             name:retinanet, method:prediction, time:1640612560.7177014
+INFO 2021-12-27 21:42:40,717 [dag.py:369] (data_id=0 log_id=10000) Succ Generate ID 
+INFO 2021-12-27 21:42:43,857 [operator.py:367] Op({}) has no fetch name set. So fetch all vars
+INFO 2021-12-27 21:42:43,857 [operator.py:1317] [retinanet|0] Succ init
+INFO 2021-12-27 21:42:48,955 [dag.py:405] (data_id=0 log_id=10000) Succ predict

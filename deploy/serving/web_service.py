@@ -124,6 +124,6 @@ class RetinaNetService(WebService):
 # define the service class
 uci_service = RetinaNetService(name="retinanet")
 # load config and prepare the service
-uci_service.prepare_pipeline_config("deploy/serving/config.yml")
+uci_service.prepare_pipeline_config("config.yml")
 # start the service
 uci_service.run_service()

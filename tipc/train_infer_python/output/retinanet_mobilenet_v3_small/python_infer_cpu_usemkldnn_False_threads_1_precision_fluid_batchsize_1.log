@@ -1,0 +1,47 @@
+-----------  Running Arguments -----------
+batch_size: 1
+camera_id: -1
+cpu_threads: 1
+device: cpu
+enable_mkldnn: False
+image_dir: ./dataset/coco/test2017/
+image_file: None
+model_dir: ./output_infer/python/retinanet_mobilenet_v3_small/retinanet_mobilenet_v3_small_fpn_1x_coco
+output_dir: ./output_infer/python/retinanet_mobilenet_v3_small
+reid_batch_size: 50
+reid_model_dir: None
+run_benchmark: False
+run_mode: fluid
+save_images: False
+save_mot_txts: False
+threshold: 0.5
+trt_calib_mode: False
+trt_max_shape: 1600
+trt_min_shape: 1
+trt_opt_shape: 640
+use_dark: True
+use_gpu: False
+video_file: None
+------------------------------------------
+-----------  Model Configuration -----------
+Model Arch: RetinaNet
+Transform Order: 
+--transform op: Resize
+--transform op: NormalizeImage
+--transform op: Permute
+--transform op: PadStride
+--------------------------------------------
+Found 2 inference images in total.
+im_bboxes_num 100
+class_id:0, confidence:0.8954, left_top:[208.29,3.44],right_bottom:[631.48,396.00]
+class_id:39, confidence:0.5060, left_top:[538.33,3.81],right_bottom:[557.88,62.32]
+class_id:48, confidence:0.5739, left_top:[207.95,196.41],right_bottom:[361.95,311.64]
+save result to: ./output_infer/python/retinanet_mobilenet_v3_small/000000575930.jpg
+im_bboxes_num 100
+class_id:0, confidence:0.8942, left_top:[239.69,418.87],right_bottom:[305.98,614.65]
+class_id:33, confidence:0.8522, left_top:[144.76,78.66],right_bottom:[198.72,148.97]
+save result to: ./output_infer/python/retinanet_mobilenet_v3_small/000000564177.jpg
+------------------ Inference Time Info ----------------------
+total_time(ms): 8138.400000000001, img_num: 2
+average latency time(ms): 4069.20, QPS: 0.245749
+preprocess_time(ms): 62.40, inference_time(ms): 4006.70, postprocess_time(ms): 0.10

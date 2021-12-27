@@ -1,0 +1,53 @@
+-----------  Running Arguments -----------
+batch_size: 1
+camera_id: -1
+cpu_threads: 1
+device: gpu
+enable_mkldnn: False
+image_dir: ./dataset/coco/test2017/
+image_file: None
+model_dir: ./output_infer/python/retina_mobile_v3_large/retinanet_mobilenet_v3_large_fpn_1x_coco
+output_dir: ./output_infer/python/retina_mobile_v3_large
+reid_batch_size: 50
+reid_model_dir: None
+run_benchmark: False
+run_mode: fluid
+save_images: False
+save_mot_txts: False
+threshold: 0.5
+trt_calib_mode: False
+trt_max_shape: 1600
+trt_min_shape: 1
+trt_opt_shape: 640
+use_dark: True
+use_gpu: False
+video_file: None
+------------------------------------------
+-----------  Model Configuration -----------
+Model Arch: RetinaNet
+Transform Order: 
+--transform op: Resize
+--transform op: NormalizeImage
+--transform op: Permute
+--transform op: PadStride
+--------------------------------------------
+Found 2 inference images in total.
+im_bboxes_num 100
+class_id:0, confidence:0.8525, left_top:[283.75,6.53],right_bottom:[629.20,396.00]
+class_id:39, confidence:0.6707, left_top:[537.77,3.16],right_bottom:[559.81,67.02]
+class_id:39, confidence:0.5917, left_top:[520.40,3.11],right_bottom:[539.95,66.39]
+class_id:39, confidence:0.5217, left_top:[391.72,1.49],right_bottom:[410.00,62.75]
+class_id:39, confidence:0.5169, left_top:[350.85,0.00],right_bottom:[375.86,68.24]
+class_id:39, confidence:0.5145, left_top:[376.48,1.67],right_bottom:[394.62,63.91]
+class_id:39, confidence:0.5088, left_top:[514.11,1.96],right_bottom:[533.08,62.94]
+class_id:48, confidence:0.5953, left_top:[207.95,193.69],right_bottom:[366.04,307.90]
+class_id:48, confidence:0.5174, left_top:[24.75,243.48],right_bottom:[211.05,323.73]
+save result to: ./output_infer/python/retina_mobile_v3_large/000000575930.jpg
+im_bboxes_num 100
+class_id:0, confidence:0.7510, left_top:[236.12,420.00],right_bottom:[305.40,610.00]
+class_id:33, confidence:0.8094, left_top:[145.75,78.17],right_bottom:[201.41,147.96]
+save result to: ./output_infer/python/retina_mobile_v3_large/000000564177.jpg
+------------------ Inference Time Info ----------------------
+total_time(ms): 907.9000000000001, img_num: 2
+average latency time(ms): 453.95, QPS: 2.202886
+preprocess_time(ms): 56.60, inference_time(ms): 397.30, postprocess_time(ms): 0.10

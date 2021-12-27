@@ -190,11 +190,11 @@ python tools/infer.py -c ./configs/fast_rcnn/fast_rcnn_r50_fpn_1x_coco.yml --inf
 
 ## 六、Citations
 ```
-@inproceedings{girshickICCV15fastrcnn,
-    Author = {Ross Girshick},
-    Title = {Fast R-CNN},
-    Booktitle = {International Conference on Computer Vision ({ICCV})},
-    Year = {2015}
+@misc{linICCV17retinanet,
+      Author = {Tsung-Yi Lin},
+      Title = {RetinaNet},
+      Booktitle = {International Conference on Computer Vision ({ICCV})},
+      Year = {2017}
 }
 ```
 ## 七、TODO

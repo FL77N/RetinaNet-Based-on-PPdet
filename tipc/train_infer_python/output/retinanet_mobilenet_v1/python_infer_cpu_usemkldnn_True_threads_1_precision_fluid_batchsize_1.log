@@ -1,0 +1,51 @@
+-----------  Running Arguments -----------
+batch_size: 1
+camera_id: -1
+cpu_threads: 1
+device: cpu
+enable_mkldnn: True
+image_dir: ./dataset/coco/test2017/
+image_file: None
+model_dir: ./output_infer/python/retinanet_mobilenet_v1/retinanet_mobilenet_v1_fpn_1x_coco
+output_dir: ./output_infer/python/retinanet_mobilenet_v1
+reid_batch_size: 50
+reid_model_dir: None
+run_benchmark: False
+run_mode: fluid
+save_images: False
+save_mot_txts: False
+threshold: 0.5
+trt_calib_mode: False
+trt_max_shape: 1600
+trt_min_shape: 1
+trt_opt_shape: 640
+use_dark: True
+use_gpu: False
+video_file: None
+------------------------------------------
+-----------  Model Configuration -----------
+Model Arch: RetinaNet
+Transform Order: 
+--transform op: Resize
+--transform op: NormalizeImage
+--transform op: Permute
+--transform op: PadStride
+--------------------------------------------
+Found 2 inference images in total.
+im_bboxes_num 100
+class_id:0, confidence:0.8203, left_top:[200.94,6.01],right_bottom:[618.93,396.00]
+class_id:39, confidence:0.6998, left_top:[537.60,2.24],right_bottom:[559.30,63.89]
+class_id:39, confidence:0.6168, left_top:[517.85,2.94],right_bottom:[538.96,66.76]
+class_id:39, confidence:0.5546, left_top:[560.78,2.14],right_bottom:[579.90,43.39]
+class_id:39, confidence:0.5309, left_top:[350.55,0.49],right_bottom:[375.72,70.52]
+class_id:48, confidence:0.7134, left_top:[204.62,190.38],right_bottom:[362.00,322.71]
+class_id:52, confidence:0.5557, left_top:[81.53,204.03],right_bottom:[217.85,251.76]
+save result to: ./output_infer/python/retinanet_mobilenet_v1/000000575930.jpg
+im_bboxes_num 100
+class_id:0, confidence:0.8061, left_top:[240.46,417.08],right_bottom:[304.92,611.70]
+class_id:33, confidence:0.8483, left_top:[145.04,78.38],right_bottom:[199.55,147.05]
+save result to: ./output_infer/python/retinanet_mobilenet_v1/000000564177.jpg
+------------------ Inference Time Info ----------------------
+total_time(ms): 7202.6, img_num: 2
+average latency time(ms): 3601.30, QPS: 0.277678
+preprocess_time(ms): 70.00, inference_time(ms): 3531.20, postprocess_time(ms): 0.10

@@ -1,0 +1,52 @@
+-----------  Running Arguments -----------
+batch_size: 1
+camera_id: -1
+cpu_threads: 1
+device: gpu
+enable_mkldnn: False
+image_dir: ./dataset/coco/test2017/
+image_file: None
+model_dir: ./output_infer/python/retinanet_r50/retinanet_r50_fpn_1x_coco
+output_dir: ./output_infer/python/retinanet_r50
+reid_batch_size: 50
+reid_model_dir: None
+run_benchmark: False
+run_mode: fluid
+save_images: False
+save_mot_txts: False
+threshold: 0.5
+trt_calib_mode: False
+trt_max_shape: 1600
+trt_min_shape: 1
+trt_opt_shape: 640
+use_dark: True
+use_gpu: False
+video_file: None
+------------------------------------------
+-----------  Model Configuration -----------
+Model Arch: RetinaNet
+Transform Order: 
+--transform op: Resize
+--transform op: NormalizeImage
+--transform op: Permute
+--transform op: PadStride
+--------------------------------------------
+Found 2 inference images in total.
+im_bboxes_num 100
+class_id:0, confidence:0.9472, left_top:[280.60,5.54],right_bottom:[637.31,395.06]
+class_id:27, confidence:0.8061, left_top:[413.43,171.45],right_bottom:[474.45,294.88]
+class_id:39, confidence:0.6352, left_top:[539.17,4.76],right_bottom:[558.70,65.39]
+class_id:39, confidence:0.6168, left_top:[520.19,3.65],right_bottom:[539.09,67.33]
+class_id:39, confidence:0.5056, left_top:[571.42,0.07],right_bottom:[583.28,41.20]
+class_id:48, confidence:0.6862, left_top:[203.21,202.27],right_bottom:[369.51,320.14]
+class_id:48, confidence:0.6061, left_top:[17.39,249.37],right_bottom:[212.06,329.80]
+class_id:48, confidence:0.5586, left_top:[219.65,199.61],right_bottom:[359.93,269.17]
+save result to: ./output_infer/python/retinanet_r50/000000575930.jpg
+im_bboxes_num 100
+class_id:0, confidence:0.8881, left_top:[237.50,419.11],right_bottom:[307.30,611.46]
+class_id:33, confidence:0.9035, left_top:[144.65,78.06],right_bottom:[201.04,148.82]
+save result to: ./output_infer/python/retinanet_r50/000000564177.jpg
+------------------ Inference Time Info ----------------------
+total_time(ms): 841.8, img_num: 2
+average latency time(ms): 420.90, QPS: 2.375861
+preprocess_time(ms): 60.50, inference_time(ms): 360.40, postprocess_time(ms): 0.00

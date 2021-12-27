@@ -1,0 +1,46 @@
+-----------  Running Arguments -----------
+batch_size: 1
+camera_id: -1
+cpu_threads: 1
+device: cpu
+enable_mkldnn: False
+image_dir: ./dataset/coco/test2017/
+image_file: None
+model_dir: ./output_infer/python/retinanet_shufflenet_v2/retinanet_shufflenet_v2_fpn_1x_coco
+output_dir: ./output_infer/python/retinanet_shufflenet_v2
+reid_batch_size: 50
+reid_model_dir: None
+run_benchmark: False
+run_mode: fluid
+save_images: False
+save_mot_txts: False
+threshold: 0.5
+trt_calib_mode: False
+trt_max_shape: 1600
+trt_min_shape: 1
+trt_opt_shape: 640
+use_dark: True
+use_gpu: False
+video_file: None
+------------------------------------------
+-----------  Model Configuration -----------
+Model Arch: RetinaNet
+Transform Order: 
+--transform op: Resize
+--transform op: NormalizeImage
+--transform op: Permute
+--transform op: PadStride
+--------------------------------------------
+Found 2 inference images in total.
+im_bboxes_num 100
+class_id:0, confidence:0.8671, left_top:[231.58,3.59],right_bottom:[616.42,396.00]
+class_id:48, confidence:0.5041, left_top:[204.90,204.48],right_bottom:[360.37,311.18]
+save result to: ./output_infer/python/retinanet_shufflenet_v2/000000575930.jpg
+im_bboxes_num 100
+class_id:0, confidence:0.9048, left_top:[238.16,422.48],right_bottom:[306.87,615.35]
+class_id:33, confidence:0.8287, left_top:[146.76,79.64],right_bottom:[200.17,147.36]
+save result to: ./output_infer/python/retinanet_shufflenet_v2/000000564177.jpg
+------------------ Inference Time Info ----------------------
+total_time(ms): 6079.1, img_num: 2
+average latency time(ms): 3039.55, QPS: 0.328996
+preprocess_time(ms): 40.50, inference_time(ms): 2999.00, postprocess_time(ms): 0.10

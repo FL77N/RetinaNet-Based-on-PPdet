@@ -1,0 +1,6 @@
+reprod-log
+pynvml
+psutil
+GPUtil
+paddleslim
+pycocotools
