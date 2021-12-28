@@ -47,7 +47,7 @@ tipc/
 │   ├── README.md                                    # 训推测使用文档
 │
 ├── serving/                                         # serving 端部署相关文件
-│   ├── configs/									 # 相关配置文件
+│   ├── configs/									                   # 相关配置文件
 │       ├── retinanet_r50_fpn_1x_coco.txt
 │   ├── output/                                      # 训推测中的 log 及模型保存
 │       ├── results_serving.log
