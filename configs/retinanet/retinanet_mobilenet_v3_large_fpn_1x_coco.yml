@@ -10,11 +10,10 @@ pretrain_weights: https://paddledet.bj.bcebos.com/models/pretrained/MobileNetV3_
 
 RetinaNet:
   backbone: MobileNetV3
-# sync_bn
+
 MobileNetV3:
   model_name: large
   scale: 1.
   with_extra_blocks: false
   extra_block_filters: []
   feature_maps: [7, 13, 16]
-  norm_type: bn
