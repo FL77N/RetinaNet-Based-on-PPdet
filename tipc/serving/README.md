@@ -36,7 +36,7 @@ pip install paddle_serving_app-0.7.0-py3-none-any.whl
 
 ### 2.2 准备模型
 
-使用训推一体化进行动转静，得到静态图模型。也可以使用 export_model.py 导出模型，命令见[PPDet 第八点](https://github.com/PaddlePaddle/PaddleDetection/blob/develop/docs/tutorials/GETTING_STARTED_cn.md) ，导出的模型须于[配置文件第五行](https://github.com/FL77N/RetinaNet-Based-on-PPdet/blob/main/tipc/serving/configs/retinanet_r50_fpn_1x_coco.txt)对应。
+使用训推一体化进行动转静，得到静态图模型。也可以使用 export_model.py 导出模型，命令见[PPDet 第八点](https://github.com/PaddlePaddle/PaddleDetection/blob/develop/docs/tutorials/GETTING_STARTED_cn.md) ，导出的模型须与[配置文件第五行](https://github.com/FL77N/RetinaNet-Based-on-PPdet/blob/main/tipc/serving/configs/retinanet_r50_fpn_1x_coco.txt)对应。
 
 ```bash
 bash tipc/train_infer_python/prepare.sh tipc/train_infer_python/configs/retinanet/retinanet_r50_fpn_1x_coco.txt 'whole_infer'
