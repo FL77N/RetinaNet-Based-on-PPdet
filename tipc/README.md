@@ -16,13 +16,13 @@
 - 基础训练预测：包括模型训练、混合精度、Paddle Inference Python预测、Serving 预测。
 - 更多训练方式：包括多机多卡。
 
-| 算法论文 | 模型名称 | 模型类型 | 基础<br>训练预测 | 更多<br>训练方式 | 模型压缩 |  其他预测部署  | 最优模型与日志 |
-| :--: | :---: | :----: | :--------: | :----: | :---: | :---: | :---: |
-| [Retinanet](https://arxiv.org/abs/1708.02002) | [retinanet_r50_fpn_1x_coco](tipc/train_infer_python/configs/retinanet/retinanet_r50_fpn_1x_coco_train_infer_python.txt) | 目标检测  | 支持 | 混合精度 | x | Serving | [BaiDu Aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/104021) |
-|  | [retinanet_mobilenet_v1_fpn_1x_coco](tipc/train_infer_python/configs/retinanet/retinanet_mobilenet_v1_fpn_1x_coco_train_infer_python.txt) | 目标检测<br/>轻量化 | 支持 | 混合精度 | x | Serving | [BaiDu Aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/123285) |
-|  | [retinanet_mobilenet_v3_small_fpn_1x_coco](tipc/train_infer_python/configs/retinanet/retinanet_mobilenet_v3_small_fpn_1x_coco_train_infer_python.txt) | 目标检测<br/>轻量化 | 支持 | 混合精度 | x | Serving | [BaiDu Aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/123285) |
-|  | [retinanet_mobilenet_v3_large_fpn_1x_coco](tipc/train_infer_python/configs/retinanet/retinanet_mobilenet_v3_large_fpn_1x_coco_train_infer_python.txt) | 目标检测<br/>轻量化 | 支持 | 混合精度 | x | Serving | [BaiDu Aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/123285) |
-|  | [retinanet_shufflenet_v2_fpn_1x_coco](tipc/train_infer_python/configs/retinanet/retinanet_shufflenet_v2_fpn_1x_coco_train_infer_python.txt) | 目标检测<br/>轻量化 | 支持 | 混合精度 | x | Serving | [BaiDu Aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/123285) |
+| 算法论文 | 模型名称 | 模型类型 | 基础<br>训练预测 | 更多<br>训练方式 | 模型压缩 |  其他预测部署  | 最优模型与日志 | COCO2017 val精度 |
+| :--: | :---: | :----: | :--------: | :----: | :---: | :---: | :---: | :---: |
+| [Retinanet](https://arxiv.org/abs/1708.02002) | [retinanet_r50_fpn_1x_coco](tipc/train_infer_python/configs/retinanet/retinanet_r50_fpn_1x_coco_train_infer_python.txt) | 目标检测  | 支持 | 混合精度 | x | Serving | [BaiDu Aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/104021) | 37.4 |
+|  | [retinanet_mobilenet_v1_fpn_1x_coco](tipc/train_infer_python/configs/retinanet/retinanet_mobilenet_v1_fpn_1x_coco_train_infer_python.txt) | 目标检测<br/>轻量化 | 支持 | 混合精度 | x | Serving | [BaiDu Aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/123285) | 30.0 |
+|  | [retinanet_mobilenet_v3_small_fpn_1x_coco](tipc/train_infer_python/configs/retinanet/retinanet_mobilenet_v3_small_fpn_1x_coco_train_infer_python.txt) | 目标检测<br/>轻量化 | 支持 | 混合精度 | x | Serving | [BaiDu Aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/123285) | 28.8 |
+|  | [retinanet_mobilenet_v3_large_fpn_1x_coco](tipc/train_infer_python/configs/retinanet/retinanet_mobilenet_v3_large_fpn_1x_coco_train_infer_python.txt) | 目标检测<br/>轻量化 | 支持 | 混合精度 | x | Serving | [BaiDu Aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/123285) | 35.4 |
+|  | [retinanet_shufflenet_v2_fpn_1x_coco](tipc/train_infer_python/configs/retinanet/retinanet_shufflenet_v2_fpn_1x_coco_train_infer_python.txt) | 目标检测<br/>轻量化 | 支持 | 混合精度 | x | Serving | [BaiDu Aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/123285) | 27.6 |
 
 ## 3. 测试工具简介
 ### 目录介绍
