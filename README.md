@@ -112,7 +112,7 @@ python tools/infer.py -c configs/your dir/your config.yml --infer_img=your image
 ├─config                          # 配置
 ├─dataset                         # 数据集加载
 ├─deploy                          # 模型部署
-├─output                          # infer 可视化输出
+├─output_infer                    # infer 可视化输出
 ├─ppdet                           # 模型
 ├─tipc                            # tipc 测试脚本
 ├─tools                           # 训练、推理、预测
