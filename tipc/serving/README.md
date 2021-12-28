@@ -58,7 +58,7 @@ bash tipc/test_serving.sh tipc/serving/configs/retinanet_r50_fpn_1x_coco.txt
 
 ```
 Run successfully with command - python3.7 pipeline_http_client.py --img_path=../../dataset/coco/test2017/000000575930.jpg> ../../tipc/serving/output/server_infer_gpu_pipeline_http_usetrt_null_precision_null_batchsize_1.log 2>&1!
-Run successfully  with command - xxxxx
+Run successfully with command - xxxxx
 ...
 ```
 
