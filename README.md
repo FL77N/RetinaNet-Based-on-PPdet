@@ -123,11 +123,11 @@ python tools/infer.py -c configs/your dir/your config.yml --infer_img=your image
 
 ### 5.2 参数说明
 
-[训练、推理、测试相关参数设置](https://github.com/FL77N/Fast-RCNN-on-PPDet/blob/main/configs/fast_rcnn/_base_/fast_rcnn_fpn_reader.yml)
+[训练、推理、测试相关参数设置](https://github.com/FL77N/RetinaNet-Based-on-PPdet/blob/main/configs/retinanet/_base_/retinanet_reader.yml)
 
-[优化器相关参数设置](https://github.com/FL77N/Fast-RCNN-on-PPDet/blob/main/configs/fast_rcnn/_base_/optimizer_1x.yml)
+[优化器相关参数设置](https://github.com/FL77N/RetinaNet-Based-on-PPdet/blob/main/configs/retinanet/_base_/optimizer_1x.yml)
 
-[数据集加载相关设置](https://github.com/FL77N/Fast-RCNN-on-PPDet/blob/main/configs/datasets/coco_detection.yml)
+[数据集加载相关设置](https://github.com/FL77N/RetinaNet-Based-on-PPdet/blob/main/configs/datasets/coco_detection.yml)
 
 ### 5.3 训练流程
 
@@ -166,7 +166,7 @@ loading annotations into memory...
 ```bash
 python tools/infer.py -c configs/your dir/your config.yml --infer_img=your image.jpg -o weights=your best model.pdparams
 ```
-此时的输出结果保存在`$output`下面
+此时的输出结果保存在`output`下面
 
 
 ### 5.6 使用预训练模型预测
@@ -178,7 +178,7 @@ python tools/infer.py -c configs/your dir/your config.yml --infer_img=your image
 
 **step2:** 使用预训练模型完成预测
 ```bash
-python tools/infer.py -c ./configs/fast_rcnn/fast_rcnn_r50_fpn_1x_coco.yml --infer_img=your image.jpg -o weights=best_model.pdparams
+python tools/infer.py -c ./configs/retinanet/retinanet_r50_fpn_1x_coco.yml --infer_img=your image.jpg -o weights=best_model.pdparams
 ```
 ### 5.7 TIPC测试
 
