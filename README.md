@@ -182,9 +182,9 @@ python tools/infer.py -c ./configs/fast_rcnn/fast_rcnn_r50_fpn_1x_coco.yml --inf
 ```
 ### 5.7 TIPC测试
 
-[The tutorials of TIPC](https://github.com/FL77N/Fast-RCNN-on-PPDet/tree/main/test_tipc/docs)
+The tutorials of TIPC：[Python](https://github.com/FL77N/RetinaNet-Based-on-PPdet/blob/main/tipc/train_infer_python)、[Serving](https://github.com/FL77N/RetinaNet-Based-on-PPdet/tree/main/tipc/serving)
 
-[The results of TIPC](https://github.com/FL77N/Fast-RCNN-on-PPDet/tree/main/test_tipc/output)
+The results of TIPC: [Python](https://github.com/FL77N/RetinaNet-Based-on-PPdet/blob/main/tipc/train_infer_python/output)、[Serving](https://github.com/FL77N/RetinaNet-Based-on-PPdet/tree/main/tipc/serving/output)
 
 [More detail about PPDet](https://github.com/PaddlePaddle/PaddleDetection/tree/develop/docs/tutorials)
 
