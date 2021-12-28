@@ -52,7 +52,7 @@ tipc/
 │   ├── output/                                      # 训推测中的 log 及模型保存
 │       ├── results_serving.log
 │       ├── ...
-│   ├── test_train_inference_python.sh               # 测试 serving 端预测的主程序
+│   ├── test_serving.sh               # 测试 serving 端预测的主程序
 │   ├── README.md                                    # serving 端预测使用文档
 │
 ├── requirements.txt                                 # 需要安装的相关依赖
