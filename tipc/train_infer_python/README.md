@@ -8,7 +8,7 @@ Linux端基础训练预测功能测试的主程序为`test_train_inference_pytho
 - 训练相关：
 
 | 算法名称 | 模型名称 | 单机单卡 | 单机多卡 | 多机多卡 | 模型压缩 |
-|  :----  |   :----  |    :----  |  :----   |  :----   |  :----   |
+|  :----:  |   :----:  |    :----:  |  :----:   |  :----:   |  :----:   |
 |  Retinanet  | retinanet_r50_fpn_1x_coco | 正常训练 <br> 混合精度 | 正常训练 <br> 混合精度 | 正常训练 <br> 混合精度 | - |
 |  Retinanet  | retinanet_mobilenet_v1_fpn_1x_coco | 正常训练 <br> 混合精度 | 正常训练 <br> 混合精度 | 正常训练 <br> 混合精度 | - |
 |  Retinanet  | retinanet_mobilenet_v3_small_fpn_1x_coco | 正常训练 <br> 混合精度 | 正常训练 <br> 混合精度 | 正常训练 <br> 混合精度 | - |
