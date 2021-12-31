@@ -70,7 +70,7 @@ Run failed with command - xxxxx
 ...
 ```
 
-详细的预测结果会存在 tipc/output/ 文件夹下，例如`server_infer_gpu_pipeline_http_usetrt_null_precision_null_batchsize_1.log`中会返回类别ID、置信度、预测框左上坐标及右下坐标:
+详细的预测结果会存在 tipc/serving/output/ 文件夹下，例如`server_infer_gpu_pipeline_http_usetrt_null_precision_null_batchsize_1.log`中会返回类别ID、置信度、预测框左上坐标及右下坐标:
 
 ```
 {'err_no': 0, 'err_msg': '', 'key': ['class_id', 'confidence', 'left_top', 'right_bottom'], 
