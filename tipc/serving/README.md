@@ -48,12 +48,12 @@ bash tipc/train_infer_python/test_train_inference_python.sh tipc/train_infer_pyt
 运行`test_serving.sh`进行测试，最终在`tipc/output`目录下生成`serving_infer_*.log`后缀的日志文件。
 
 ```bash
-bash tipc/test_serving.sh tipc/serving/configs/retinanet_r50_fpn_1x_coco.txt
+bash tipc/serving/test_serving.sh tipc/serving/configs/retinanet_r50_fpn_1x_coco.txt
 ```  
 
 #### 运行结果
 
-各测试的运行情况会打印在 `tipc/output/results_serving.log` 中：
+各测试的运行情况会打印在 `tipc/serving/output/results_serving.log` 中：
 运行成功时会输出：
 
 ```
