@@ -27,6 +27,7 @@ from . import detr_loss
 from . import sparsercnn_loss
 from . import retinanet_loss
 from . import ghm_loss
+from . import atss_loss
 
 from .yolo_loss import *
 from .iou_aware_loss import *
@@ -43,3 +44,4 @@ from .detr_loss import *
 from .sparsercnn_loss import *
 from .retinanet_loss import *
 from .ghm_loss import *
+from .atss_loss import *

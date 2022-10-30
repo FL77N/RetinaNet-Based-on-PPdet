@@ -41,6 +41,7 @@ r50_fpn_1x_ss_training|Tesla V-100 x 8 <br/>([Facebook official](https://github.
 r50_fpn_1x_ss_training|**Tesla V-100 x 4**|**37.0**|12|16|[-](https://github.com/facebookresearch/Detectron/blob/master/MODEL_ZOO.md)|COCO
 r50_fpn_1x_ms_training|Tesla V-100 x 8 <br/>([Facebook official](https://github.com/facebookresearch/detectron2/blob/master/MODEL_ZOO.md))|37.4|12|16|[retinanet_R_50_FPN_1x.yaml](https://github.com/facebookresearch/detectron2/blob/main/configs/COCO-Detection/retinanet_R_50_FPN_1x.yaml)|COCO
 r50_fpn_1x_ms_training|**Tesla V-100 x 4**|**37.4**|12|16|[retinanet_r50_fpn_1x_coco.yml](https://github.com/FL77N/RetinaNet-Based-on-PPdet/blob/main/configs/retinanet/retinanet_r50_fpn_1x_coco.yml)|COCO
+r50_fpn_1x_ms_training_atss|**Tesla V-100 x 4**|**39.2**|12|16|[atss_r50_fpn_1x_coco.yml](https://github.com/FL77N/RetinaNet-Based-on-PPdet/blob/main/configs/atss/atss_r50_fpn_1x_coco.yml)|COCO
 
 **模型下载**
 * The single scale training best model is saved to: [Baidu Aistudio](https://aistudio.baidu.com/aistudio/datasetdetail/104154)

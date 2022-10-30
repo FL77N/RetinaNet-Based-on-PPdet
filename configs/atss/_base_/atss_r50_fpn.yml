@@ -1,0 +1,54 @@
+architecture: ATSS
+pretrain_weights: https://paddledet.bj.bcebos.com/models/pretrained/ResNet50_cos_pretrained.pdparams
+
+ATSS:
+  backbone: ResNet
+  neck: FPN
+  anchor_generator: AnchorGenerator
+  head: ATSSHead
+  postprocess: RetinaNetPostProcess
+
+ResNet:
+  # index 0 stands for res2
+  depth: 50
+  norm_type: bn
+  freeze_at: 0
+  return_idx: [1,2,3]
+  num_stages: 4
+
+FPN:
+  out_channel: 256
+  spatial_scales: [0.125, 0.0625, 0.03125]
+  extra_stage: 2
+  has_extra_convs: true
+  use_c5: false
+
+AnchorGenerator:
+  anchor_sizes: [[64.0], [128.0], [256.0], [512.0], [1024.0]]
+  aspect_ratios: [1.0]
+  strides: [8.0, 16.0, 32.0, 64.0, 128.0]
+
+ATSSHead:
+  in_channels: 256
+  num_classes: 80
+  num_convs: 4
+  loss_func: ATSSLoss
+  prior_prob: 0.01
+
+RetinaNetPostProcess:
+  nms:
+    name: MultiClassNMS
+    nms_top_k: 1000
+    keep_top_k: 100
+    nms_threshold: 0.6
+  bbox_reg_weights: [10.0, 10.0, 5.0, 5.0]
+
+ATSSLoss:
+  aspect_ratios: [1.0]
+  anchor_size: [[64.0], [128.0], [256.0], [512.0], [1024.0]]
+  focal_loss_alpha: 0.25
+  focal_loss_gamma: 2
+  topk: 9
+  num_classes: 80
+  reg_loss_weight: 2.0
+  bbox_reg_weights: [10.0, 10.0, 5.0, 5.0]
